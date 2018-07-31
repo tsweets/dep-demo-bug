@@ -13,8 +13,17 @@ repositories {
 }
 
 dependencies {
-    // versions 19,20,21,22,23
+    // I'm dependency locked to version 19
+    //compile group: 'com.google.guava', name: 'guava', version: '19.0'
+
+    // Expect this to fail - but it does not
     compile group: 'com.google.guava', name: 'guava', version: '17.0'
+
+    // Expect this to fail - but it does not
+    //compile group: 'com.google.guava', name: 'guava', version: '+'
+
+    // Expect this to fail and it does
+    //compile group: 'com.google.guava', name: 'guava', version: '22.0'
 
     testCompile group: 'junit', name: 'junit', version: '4.12'
 }
